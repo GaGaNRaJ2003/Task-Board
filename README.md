@@ -1,99 +1,89 @@
-# Task Management Board
+# Task Board
 
-A drag-and-drop task management board application built with React, Vite, and Python FastAPI.
+A modern, fullstack task management board inspired by Trello. Built with React (Vite, Tailwind CSS) and FastAPI (Python, SQLite).
 
-## Features
+---
 
-- View tasks organized in columns (To Do, In Progress, Done)
-- Create new tasks
-- Edit existing tasks
-- Delete tasks
-- Drag and drop tasks between columns
-- Persistent state management
+## ✨ Features
 
-## Tech Stack
+- 📝 Drag-and-drop task management (move and reorder tasks between columns)
+- ➕ Create, edit, and delete tasks
+- 💾 Persistent storage with SQLite
+- 🌗 Light and dark mode toggle
+- 📱 Responsive, professional UI
 
-### Frontend
-- React with Vite
-- Tailwind CSS
-- react-beautiful-dnd for drag and drop functionality
-- Axios for API calls
+---
 
-### Backend
-- Python FastAPI
-- SQLite database
-- Pydantic for data validation
+## 🛠️ Tech Stack
 
-## Project Structure
+- **Frontend:** React, Vite, Tailwind CSS, react-beautiful-dnd
+- **Backend:** FastAPI, SQLite, SQLAlchemy
 
-```
-task-board/
-├── frontend/          # React + Vite frontend
-├── backend/           # Python FastAPI backend
-└── README.md
+---
+
+## 🚀 Setup Instructions
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/YOUR_USERNAME/task-board.git
+cd task-board
 ```
 
-## Setup Instructions
+### 2. Backend Setup
 
-### Backend Setup
+```bash
+cd backend
+python -m venv venv
+# On Windows:
+venv\Scripts\activate
+# On Mac/Linux:
+source venv/bin/activate
 
-1. Navigate to the backend directory:
-   ```bash
-   cd backend
-   ```
+pip install -r requirements.txt
+uvicorn main:app --reload
+```
+- The backend will run at `http://localhost:8000`
 
-2. Create a virtual environment:
-   ```bash
-   python -m venv venv
-   ```
+### 3. Frontend Setup
 
-3. Activate the virtual environment:
-   - Windows:
-     ```bash
-     .\venv\Scripts\activate
-     ```
-   - Unix/MacOS:
-     ```bash
-     source venv/bin/activate
-     ```
+Open a new terminal, then:
 
-4. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
+```bash
+cd frontend
+npm install
+npm run dev
+```
+- The frontend will run at `http://localhost:5173`
 
-5. Run the backend server:
-   ```bash
-   uvicorn main:app --reload
-   ```
+---
 
-The backend will be available at `http://localhost:8000`
+## 🌍 Deployment
 
-### Frontend Setup
+- **Frontend:** Deploy the `frontend` folder to [Vercel](https://vercel.com/) or [Netlify](https://www.netlify.com/)
+- **Backend:** Deploy the `backend` folder to [Render](https://render.com/), [Railway](https://railway.app/), or [Fly.io](https://fly.io/)
 
-1. Navigate to the frontend directory:
-   ```bash
-   cd frontend
-   ```
+**Live Demo:** [YOUR_LIVE_LINK_HERE](#)
 
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
+---
 
-3. Run the development server:
-   ```bash
-   npm run dev
-   ```
+## 📸 Screenshots
 
-The frontend will be available at `http://localhost:5173`
+![Task Board Screenshot](LightMode.jpg)
+![Task Board Screenshot](DarkMode.jpg)
 
-## API Documentation
+---
 
-Once the backend is running, you can access the API documentation at:
-- Swagger UI: `http://localhost:8000/docs`
-- ReDoc: `http://localhost:8000/redoc`
+## 📄 License
 
-## License
+MIT
 
-MIT 
+---
+
+## 🙏 Credits
+
+- [React](https://react.dev/)
+- [Vite](https://vitejs.dev/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [FastAPI](https://fastapi.tiangolo.com/)
+- [react-beautiful-dnd](https://github.com/atlassian/react-beautiful-dnd) 
