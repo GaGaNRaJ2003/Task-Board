@@ -69,7 +69,8 @@ npm run dev
 
 ## 📸 Screenshots
 
-![Task Board Screenshot](screenshot.png)
+![Task Board Screenshot](LightMode.jpg)
+![Task Board Screenshot](DarkMode.jpg)
 
 ---
 
