@@ -1,6 +1,6 @@
 import { createContext, useContext, useState, useEffect } from 'react';
 
-const API_URL = 'http://localhost:8000';  // Added local backend URL
+const API_URL = 'https://task-board-backend-1ur5.onrender.com';  // Added local backend URL
 
 const AuthContext = createContext(null);
 

@@ -7,7 +7,7 @@ import { MoonIcon, SunIcon, ClipboardDocumentListIcon } from '@heroicons/react/2
 import { useAuth } from '../contexts/AuthContext';
 import Header from './Header';
 
-const API_URL = 'http://localhost:8000';
+const API_URL = 'https://task-board-backend-1ur5.onrender.com';
 
 export default function TaskBoard() {
   const [tasks, setTasks] = useState([]);
