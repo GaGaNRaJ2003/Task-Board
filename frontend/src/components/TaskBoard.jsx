@@ -6,6 +6,7 @@ import TaskForm from './TaskForm';
 import { MoonIcon, SunIcon, ClipboardDocumentListIcon } from '@heroicons/react/24/outline';
 import { useAuth } from '../contexts/AuthContext';
 import Header from './Header';
+import { useDarkMode } from '../contexts/DarkModeContext';
 
 const API_URL = 'https://task-board-backend-1ur5.onrender.com';
 
@@ -14,11 +15,9 @@ export default function TaskBoard() {
   const [isFormOpen, setIsFormOpen] = useState(false);
   const [editingTask, setEditingTask] = useState(null);
   const [newTaskStatus, setNewTaskStatus] = useState(null);
-  const [darkMode, setDarkMode] = useState(() => {
-    return localStorage.getItem('theme') === 'dark';
-  });
   const { user, token, logout } = useAuth();
   const [isDragging, setIsDragging] = useState(false);
+  const { darkMode, toggleDarkMode } = useDarkMode();
 
   const columns = {
     todo: {
@@ -40,17 +39,6 @@ export default function TaskBoard() {
       fetchTasks();
     }
   }, [token]);
-
-  useEffect(() => {
-    const root = window.document.documentElement;
-    if (darkMode) {
-      root.classList.add('dark');
-      localStorage.setItem('theme', 'dark');
-    } else {
-      root.classList.remove('dark');
-      localStorage.setItem('theme', 'light');
-    }
-  }, [darkMode]);
 
   useEffect(() => {
     if (isDragging) {
@@ -234,7 +222,7 @@ export default function TaskBoard() {
               Logout
             </button>
             <button
-              onClick={() => setDarkMode((d) => !d)}
+              onClick={toggleDarkMode}
               className="p-2 rounded-full bg-slate-200 dark:bg-slate-700 hover:bg-slate-300 dark:hover:bg-slate-600 transition-colors shadow-md"
               title={darkMode ? 'Switch to light mode' : 'Switch to dark mode'}
             >
