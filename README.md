@@ -60,10 +60,10 @@ npm run dev
 
 ## 🌍 Deployment
 
-- **Frontend:** Deploy the `frontend` folder to [Vercel](https://vercel.com/) or [Netlify](https://www.netlify.com/)
-- **Backend:** Deploy the `backend` folder to [Render](https://render.com/), [Railway](https://railway.app/), or [Fly.io](https://fly.io/)
+- **Frontend:** Deploy the `frontend` folder to [Vercel](https://vercel.com/)
+- **Backend:** Deploy the `backend` folder to [Render](https://render.com/)
 
-**Live Demo:** [YOUR_LIVE_LINK_HERE](#)
+**Live Demo:** [https://task-board-murex-five.vercel.app/](#)
 
 ---
 
