@@ -79,6 +79,7 @@ npm run dev
 MIT
 
 ---
+NOTE- As the backend is hosted on free tier "render" so  it takes 60 seconds to make the server live. If we'll do it on scale it won't affect us as , we'll use paid backend hosting.
 
 ## 🙏 Credits
 
